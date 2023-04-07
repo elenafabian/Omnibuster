@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Omnibuster Demo</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+		/>
+		<!-- <meta charset="UTF-8" /> -->
+		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+		<!-- font-awesome.css 5.15.4 -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- bootstrap v5.1.3 -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+			integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- bootstrap-select v1.13.18 -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css"
+			integrity="sha512-ARJR74swou2y0Q2V9k0GbzQ/5vJ2RBSoCWokg4zkfM29Fb3vZEQyv0iWBMW/yvKgyHSR/7D64pFMmU8nYmbRkg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- scripts -->
+		<!-- jquery v3.6.0 -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- bootstrap.js bundle 5.1.3 includes popper -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
+			integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- bootstrap-select v1.13.18 -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"
+			integrity="sha512-yDlE7vpGDP7o2eftkCiPZ+yuUyEcaBwoJoIhdXv71KZWugFqEphIS3PU60lEkFaz8RxaVsMpSvQxMBaKVwA5xg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
+        <style>
+			.imgbox {
+				display: grid;
+				height: 100%;
+				max-height: 150px;
+				margin-bottom: 100px;
+				margin-right: 250px;
+				margin-left: 250px;
+			}
+			.imgbox img {
+				max-height: 150px;
+			}
+			.center-fit {
+				margin-top: 60px;
+				max-width: 100%;
+				max-height: 100vh;
+				/*margin: auto;*/
+			}
+		</style>
+
+        <style>
+            form.upload {
+                display: flex;
+                flex-direction: column;
+                max-width: 450px;
+                background: white;
+                padding: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                /* margin-top: 5vh; */
+            }
+            form.upload > div {
+                margin-bottom: 20px;
+            }
+            form.upload label {
+                width: 100%;
+                font-weight: bold;
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+            form.upload input {
+                background: #f2f2f2;
+                border: solid 1px #ccc;
+                padding: 10px;
+                border-radius: 4px;
+                font-size: 1.3em;
+                width: 100%;
+            }
+            form.upload button {
+                background-color: #0f1728;
+                color: white;
+                padding: 10px;
+                border-radius: 4px;
+                font-size: 1.3em;
+                border: solid 1px #fff;
+            }
+            form.upload .error {
+                color: #c91111;
+                margin-bottom: 10px;
+            }
+
+            div.trythis {
+                /*display: flex;*/
+                /*flex-direction: column;*/
+                /*max-width: 450px;*/
+                background: white;
+                padding: 200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            div.trythis button {
+                background-color: #0f1728;
+                color: white;
+                padding: 10px;
+                border-radius: 4px;
+                font-size: 1.3em;
+                border: solid 1px #fff;
+            }
+
+            div.trythis label {
+                width: 100%;
+                font-weight: bold;
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+
+            div.or {
+                width: 100%;
+                font-weight: bold;
+                font-size: 140%;
+                text-align: center;
+                margin-bottom: -100px;
+                /*display: inline-block;*/
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="imgbox">
+			<a href="/"><img
+				class="center-fit"
+				src="static/omni.jpeg"
+				alt="Omnibuster"
+				style="width: 100%"
+			/></a>
+		</div>
+
+        <div class="container">
+			<!-- nav tabs -->
+			<ul class="row nav nav-tabs" role="tablist">
+				<li class="col nav-item" role="presentation">
+					<button
+						class="nav-link w-100 active"
+						id="tab-link-citation"
+						data-bs-toggle="tab"
+						data-bs-target="#tab-citation"
+						role="tab"
+						aria-controls="tab-citation"
+						aria-selected="true"
+					>
+						Retrieve By Citation
+					</button>
+				</li>
+				<li class="col nav-item" role="presentation">
+					<button
+						class="nav-link w-100"
+						id="tab-link-upload"
+						data-bs-toggle="tab"
+						data-bs-target="#tab-upload"
+						role="tab"
+						aria-controls="tab-upload"
+						aria-selected="false"
+					>
+						Upload File
+					</button>
+				</li>
+			</ul>
+			<!-- end nav tabs -->
+
+			<!-- tabs content -->
+			<div class="tab-content" id="lsTabContent">
+				<!-- by citation -->
+				<div
+					class="tab-pane fade show active"
+					id="tab-citation"
+					role="tabpanel"
+					aria-labelledby="tab-link-citation"
+				>
+					<!-- citation body -->
+					<div class="container" style="padding-top: 30px">
+						<h4 class="text-center my-3">
+							Select a bill or public law using this form:
+						</h4>
+						<!-- nav tabs -->
+						<ul class="row nav nav-tabs pt-3 mb-4" role="tablist">
+							<li class="col nav-item" role="presentation">
+								<button
+									class="nav-link w-100 active"
+									id="tab-link-bills"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-bills"
+									role="tab"
+									aria-controls="tab-bills"
+									aria-selected="true"
+								>
+									Congressional Bills
+								</button>
+							</li>
+							<li class="col nav-item" role="presentation">
+								<button
+									class="nav-link w-100"
+									id="tab-link-laws"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-laws"
+									role="tab"
+									aria-controls="tab-laws"
+									aria-selected="false"
+								>
+									Public and Private Laws
+								</button>
+							</li>
+							<li class="col nav-item d-none" role="presentation">
+								<button
+									class="nav-link w-100"
+									id="tab-link-search"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-search"
+									role="tab"
+									aria-controls="tab-search"
+									aria-selected="false"
+								>
+									Search
+								</button>
+							</li>
+						</ul>
+						<!-- end nav tabs -->
+
+						<!-- tabs content -->
+						<div class="tab-content" id="lsTabContent">
+							<!-- congressional bills -->
+							<div
+								class="tab-pane fade show active"
+								id="tab-bills"
+								role="tabpanel"
+								aria-labelledby="tab-link-bills"
+							>
+								<form
+									id="formGetBill"
+									action="/search"
+                                    method="post"
+									class="ls-form"
+									data-ls-target-doc="bill"
+									data-ls-target-doc-desc="congressional bill"
+								>
+									<div class="row g-4 mb-5">
+                                        <!--API KEY-->
+                                        <div class="col-sm">
+											<div class="form-floating">
+												<input
+													class="form-control form-control-md ls-form-input-docnumber"
+													type="text"
+													id="billInputAPIKey"
+													aria-describedby="textbillInputAPIKey"
+													placeholder="3684"
+                                                    name="API_KEY"
+												/>
+												<label
+													for="billInputAPIKey"
+													class="form-label"
+													data-ls-tooltip="API key string."
+													>API key</label
+												>
+											</div>
+											<div id="textbillSelectAPIKey" class="form-text">
+												API key string.
+											</div>
+										</div>
+                                        <!--END API KEY-->
+										<div class="col-sm">
+											<div class="form-floating">
+												<select
+													class="form-select form-select-md ls-form-select-doccongress"
+													name="congress"
+													id="billSelectCongress"
+													aria-describedby="textBillSelectCongress"
+													placeholder="118">
+													<!--Should we make earlier congresses available too?-->
+													<option selected>Select Congress</option>
+													<option value="118">118th Congress</option>
+													<option value="117">117th Congress</option>
+													<option value="116">116th Congress</option>
+													<option value="115">115th Congress</option>
+													<option value="114">114th Congress</option>
+													<option value="113">113th Congress</option>
+												</select>
+												<label
+													class="form-label select-label"
+													for="billSelectCongress"
+													data-ls-tooltip="Numerical Congress number. Current session is 118. This site currently processes all enrolled bills for the 113th (2013-2014) Congress forward."
+													>Congress</label
+												>
+											</div>
+											<div id="textBillSelectCongress" class="form-text">
+												Numerical Congress number. Current session is 118. This
+												site currently processes all enrolled bills for the
+												113th (2013-2014) Congress forward.
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-floating">
+												<select
+													class="form-select form-select-md ls-form-select-doctype"
+													name="billtype"
+													id="billSelectType"
+													placeholder="bill type"
+													aria-describedby="textBillSelectType"
+												>
+													<option value="">Select bill type</option>
+													<option value="hr">House Bill</option>
+													<option value="s">Senate Bill</option>
+												</select>
+												<label
+													class="form-label select-label"
+													for="billselectType"
+													>Bill type</label
+												>
+											</div>
+											<div id="textBillSelectType" class="form-text">
+												There are eight different types of bills in Congress.
+												Further explanation of these types can be found
+												<a
+													href="static/docTypes.html"
+													target="_blank"
+													>here</a
+												>.
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-floating">
+												<input
+													class="form-control form-control-md ls-form-input-docnumber"
+													type="text"
+													id="billInputNumber"
+													aria-describedby="textbillInputNumber"
+													placeholder="3684"
+                                                    name="billno"
+												/>
+												<label
+													for="billInputNumber"
+													class="form-label"
+													data-ls-tooltip="Numerical bill number."
+													>Bill number</label
+												>
+											</div>
+											<div id="textLawSelectNumber" class="form-text">
+												Numerical bill number.
+											</div>
+										</div>
+									</div>
+									<div class="row g-4">
+										<div class="col-auto mx-auto">
+											<button
+												id="btnSubmitBill"
+												type="submit"
+												class="btn btn-lg btn-primary ls-btn-submit"
+											>
+												SEARCH
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<!-- end congressional bills -->
+
+							<!-- public and private laws -->
+							<div
+								class="tab-pane fade"
+								id="tab-laws"
+								role="tabpanel"
+								aria-labelledby="tab-link-laws"
+							>
+								<form
+									id="formGetLawByNumber"
+									action="/search"
+                                    method="post"
+									class="ls-form"
+									data-ls-target-doc="law"
+									data-ls-target-doc-desc="public or private law"
+								>
+									<div class="row g-4 mb-5">
+                                        <!--API KEY-->
+                                        <div class="col-sm">
+											<div class="form-floating">
+												<input
+													class="form-control form-control-md ls-form-input-docnumber"
+													type="text"
+													id="lawInputAPIKey"
+													aria-describedby="textlawInputAPIKey"
+													placeholder="3684"
+                                                    name="API_KEY"
+												/>
+												<label
+													for="lawInputAPIKey"
+													class="form-label"
+													data-ls-tooltip="API key string."
+													>API key</label
+												>
+											</div>
+											<div id="textlawSelectAPIKey" class="form-text">
+												API key string.
+											</div>
+										</div>
+                                        <!--END API KEY-->
+										<div class="col-sm">
+											<div class="form-floating">
+												<select
+													class="form-select form-select-md ls-form-select-doccongress"
+													name="congress"
+													id="lawSelectCongress"
+													aria-describedby="textLawSelectCongress"
+													placeholder="118"
+												>
+													<option selected>Select Congress</option>
+													<option value="118">118th Congress</option>
+													<option value="117">117th Congress</option>
+													<option value="116">116th Congress</option>
+													<option value="115">115th Congress</option>
+													<option value="114">114th Congress</option>
+													<option value="113">113th Congress</option>
+												</select>
+												<label
+													class="form-label select-label"
+													for="lawSelectCongress"
+													data-ls-tooltip="Numerical Congress number. Current session is 118."
+													>Congress</label
+												>
+											</div>
+											<div id="textLawSelectCongress" class="form-text">
+												Numerical Congress number. Current session is 118. This
+												site currently processes all public laws and most
+												private laws for the 113th (2013-2014) Congress forward.
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-floating">
+												<select
+													class="form-select form-select-md ls-form-select-doctype"
+													name="type"
+													id="lawSelectType"
+													aria-describedby="textLawSelectType"
+													placeholder="public"
+												>
+													<option selected>Select type of law</option>
+													<option value="public">Public Law</option>
+													<option value="private">Private Law</option>
+												</select>
+												<label
+													class="form-label select-label"
+													for="lawSelectType"
+													data-ls-tooltip="Law type. Laws can either be public or private."
+													>Law type</label
+												>
+											</div>
+											<div id="textLawSelectType" class="form-text">
+												Law type. Laws can either be public or private.
+											</div>
+										</div>
+										<div class="col-sm">
+											<div class="form-floating">
+												<input
+													class="form-control form-control-md ls-form-input-docnumber"
+													type="text"
+													id="lawSelectNumber"
+													aria-describedby="textLawSelectNumber"
+													placeholder="3684"
+												/>
+												<label
+													for="lawSelectNumber"
+													class="form-label"
+													data-ls-tooltip="Numerical law number. Laws are numbered consecutively within each law type within a Congress."
+													>Law number</label
+												>
+											</div>
+											<div id="textLawSelectNumber" class="form-text">
+												Numerical law number. Laws are numbered consecutively
+												within each law type within a Congress.
+											</div>
+										</div>
+									</div>
+									<div class="row g-4">
+										<div class="col-auto mx-auto">
+											<button
+												id="btnSubmitLaw"
+												type="submit"
+												class="btn btn-primary ls-btn-submit"
+											>
+												SUBMIT
+											</button>
+										</div>
+									</div>
+								</form>
+								<!-- end search by public law number -->
+							</div>
+							<!-- end public and private laws -->
+						</div>
+						<!-- end tabs content -->
+					</div>
+					<!-- end citation body -->
+				</div>
+				<!-- end by citation -->
+
+				<!-- upload file -->
+				<div
+					class="tab-pane fade"
+					id="tab-upload"
+					role="tabpanel"
+					aria-labelledby="tab-link-upload"
+				>
+					<!-- upload body -->
+					<div class="container m-5 px-3 pt-5">
+						<form
+							class="upload"
+							action="/upload"
+							method="POST"
+							enctype="multipart/form-data"
+						>
+							<div>
+								<label>Input USLM File of Act</label>
+								<input type="file" id="file" name="file" />
+							</div>
+
+							<button
+								id="myButton"
+								type="submit"
+								class="float-left submit-button"
+							>
+								Upload
+							</button>
+
+							<div>
+								<p>
+									Need help finding the right file? Check out these
+									<a
+										href="https://www.govinfo.gov/features/beta-uslm-xml"
+										target="_blank"
+										>instructions</a
+									>.
+								</p>
+							</div>
+						</form>
+					</div>
+					<!-- end upload body -->
+				</div>
+				<!-- end upload file -->
+			</div>
+			<!-- end tabs content -->
+		</div>
+
+		<!-- modal alert -->
+		<div
+			class="modal fade"
+			id="alertModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="alertModalLabel"></h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">
+							Close
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end modal alert -->
+
+		<!-- output -->
+
+            <div
+			id="output"
+			class="row"
+			style="background: lightyellow; border: 2px solid blue; visibility: hidden;"
+            >
+			<h4 class="col-12 p-3 text-center">RAW XML FROM API CALL USING CITATION:</h4>
+			<div
+            id="getDocResults"
+            class="col-12 mx-3 mb-3 p-3"
+            style="border: 1px solid red"
+			>
+            &nbsp
+        </div>
+    </div>
+    </body>
+</html>

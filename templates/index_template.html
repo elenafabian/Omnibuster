@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <!-- index_template.html -->
+        <meta charset="utf-8">
+        <title>Omnibuster2</title>
+        <link rel="stylesheet" href="/static/rendered_html/uslm.css">
+        <link rel="stylesheet" href="/static/rendered_html/style.css">
+        <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+        <script lang="text/javascript" src="/static/rendered_html/omni.js" defer></script>
+        <!-- <img src="../omni.jpeg" alt="Omnibuster" style="width:100%"> -->
+    
+        <style>
+            .imgbox {
+                overflow: hidden;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+
+            .img {
+                margin-top: 0;
+                z-index: 1;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- <a href="/"><img src="../omni.jpeg" alt="Omnibuster" style="width:100%"></a> -->
+
+        <div class="imgbox">
+			<a href="/"><img
+				class="img"
+				src="/static/omni.png"
+				alt="Omnibuster"
+				style="width: 100%; top:0;"
+			/></a>
+		</div>
+
+        <main>
+            <div class="stitle">
+                <h1> {{ st }} </h1>
+            </div>
+
+            <div class="TOC">
+                <h2> Table of Contents </h2>
+                {% set index = namespace(value=0) -%}
+                {% for d, l, i in info %}
+                    <div class="section">
+                        {% if i %}
+                            <a href="section_{{i}}.html"> 
+                        {% endif %}
+                        {{ d }}
+                        {{ l }} 
+                        </a>
+
+                    </div>
+                    {% set index.value = index.value + 1 -%}
+                {% endfor %}
+            </div>
+
+        </main>
+          
+    </body>

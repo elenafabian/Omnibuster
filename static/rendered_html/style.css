@@ -1,0 +1,363 @@
+/* ./static/rendered_html/style.css */
+
+html {
+  /*margin-top: 100px;*/
+  margin-bottom: 100px;
+  /*margin-right: 250px;
+  margin-left: 250px;*/
+  font-size: 140%;
+}
+
+.section {
+    margin-bottom: 10px;
+    /*margin-top: -100px;*/
+    /*margin-left: 500px;*/
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+  /* Style the collapsible content. Note: hidden by default */
+/*paragraph {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #F1F1F1;
+}*/
+
+[href="section_None.html"] {
+    margin-left: 25px;
+}
+
+[href*="section_s"] {
+    margin-left: 75px;
+} 
+
+img {
+  position: static;
+  margin-top: 60px;
+}
+
+/* Breadcrumb https://www.w3schools.com/howto/howto_css_breadcrumbs.asp*/
+/* Style the list */
+ul.breadcrumb {
+  list-style: none;
+  background-color: #eee;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 10px;
+  margin-left: -255px;
+
+}
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+
+  }
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+
+  title {
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  subsection {
+    padding-left: 5px;
+    border-left-style: solid;
+    border-left-color: green;
+    text-indent: 0;
+    border-width: medium;
+  }
+
+  paragraph {
+    padding-left: 5px;
+    border-left-style: solid;
+    border-left-color: blue;
+    text-indent: 0;
+    border-width: medium;
+  }
+
+  subparagraph {
+    padding-left: 5px;
+    border-left-style: solid;
+    border-left-color: red;
+    text-indent: 0;
+    border-width: medium;
+  }
+
+  clause {
+    padding-left: 5px;
+    border-left-style: solid;
+    border-left-color: purple;
+    text-indent: 0;
+    border-width: medium;
+  }
+
+  subclause {
+    padding-left: 5px;
+    border-left-style: solid;
+    border-left-color: orange;
+    text-indent: 0;
+    border-width: medium;
+  }
+
+  item {
+    padding-left: 5px;
+    border-left-style: solid;
+    border-left-color: yellow;
+    text-indent: 0;
+    border-width: medium;
+  }
+
+
+.stitle {
+  text-align: center;
+}
+
+
+#ls-btn-prev-sec {
+  position: fixed;
+  bottom: 30vw;
+  left: 5px;
+  z-index: 99;
+  font-size: 60px;
+  font-size: 3rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #CCC;
+  cursor: pointer;
+  padding: 15px 5px;
+  border-radius: 4px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  opacity: 0.6
+}
+
+#ls-btn-next-sec {
+  position: fixed;
+  bottom: 30vw;
+  right: 5px;
+  z-index: 99;
+  font-size: 60px;
+  font-size: 3rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #CCC;
+  cursor: pointer;
+  padding: 15px 5px;
+  border-radius: 4px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  opacity: 0.6
+}
+
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 30px;
+  width: 100%;
+  right: -20px;
+}
+
+.fa.control,
+.annotation .edit-button {
+	cursor: pointer;
+}
+
+.fa.control:hover,
+.annotation .edit-button:hover {
+	color: grey;
+}
+
+.annotations {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.annotation {
+	position: absolute;
+}
+
+.annotation .edit-button {
+	position: absolute;
+	right: -3em;
+	top: -3em;
+	padding: 2em;
+}
+
+.annotation .controls {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.annotation .control {
+	position: absolute;
+}
+
+.annotation .control.done-button {
+	right: -1em;
+	top: -1em;
+}
+
+.annotation .control.delete-button {
+	right: -1em;
+	top: 0.33em;
+}
+
+.annotation .control.move-button {
+	left: -1em;
+	top: -1em;
+}
+
+.annotation .control.resize-button {
+	right: -0.5em;
+	bottom: -0.5em;
+}
+
+.annotation textarea.control {
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+.annotation .hidden {
+	display: none;
+}
+
+#textAreaDiv {
+  visibility: hidden;
+}
+
+/* Pop UP Window https://www.w3schools.com/howto/howto_js_popup.asp*/
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  /*margin-left: -900px;*/
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: underline;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: auto;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 14px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 110px;
+  background-color: #0F1728;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  /*top: -5px;*/
+  left: 130%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #0F1728 transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

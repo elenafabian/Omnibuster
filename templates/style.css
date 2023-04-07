@@ -1,0 +1,10 @@
+/* ./templates/style.css */
+.section {
+    margin-bottom: 10px;
+    margin-left: 500px;
+}
+
+button a {
+    color:white;
+    text-decoration: none;
+}
