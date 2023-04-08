@@ -466,7 +466,7 @@ class OmniparseDOM:
         html += "<textarea name=\"commSrc\" style=\"display:none;\">" + self.filePath + "</textarea>"
         html += "<textarea name=\"commDst\" style=\"display:none;\">" + commFilePath + "</textarea>"
         html += "<textarea id=\"rawComm\" name=\"rawComm\">Add comment...</textarea>\n"
-        html += "<button class=\"saveBtn\" id=\"save\" type=\"submit\">save</button>\n"
+        html += "<button class=\"saveBtn\" id=\"save\" type=\"submit\" onclick=\"saveComment()\">save</button>\n"
         html += "</form>\n"
         if (os.path.isfile(commFilePath)):
             c = open(commFilePath, 'r', encoding="utf-8")
