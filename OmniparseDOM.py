@@ -426,7 +426,7 @@ class OmniparseDOM:
                 else:
                     html += self.doc_html_helper(k)
             else:
-                print("error: unrecognized element")
+                #print("error: unrecognized element")
 
         return html
     

@@ -57,7 +57,7 @@ def search():
     congress = request.form['congress']
     billno = request.form['billno']
     chamber = request.form['billtype']
-    print(chamber)
+    #print(chamber)
 
     # fileID
     fileID = f"{congress}_{chamber}_{billno}"
